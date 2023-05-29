@@ -22,9 +22,9 @@ def read_csv(file_name):
     return populations
 
 
-def find_subset(nums, target):
-    for r in range(1, len(nums) + 1):
-        for subset in combinations(nums, r):
+def find_subset(pops, target):
+    for r in range(1, len(pops) + 1):
+        for subset in combinations(pops, r):
             if sum(subset) == target:
                 return list(subset)
     

@@ -29,7 +29,7 @@ The input file must be in CSV format (.csv) and contain the following field(s):
 ## Output Format
 ```
 Target:     <target>
-Subset:     [populations[0], populations[1], populations[n]]
+Subset:     [populations[0], populations[1], ...., populations[n]]
 ```
 For output to .txt file use piping:
 ```
