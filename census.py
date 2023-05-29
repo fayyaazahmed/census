@@ -34,7 +34,8 @@ def find_subset(nums, target):
 
 def main():
     """
-    Parses command-line arguments and runs the program to read in a csv file of populations, then sort TODO!!!!
+    Parses command-line arguments and runs the program to read in a csv file of populations uses combinations to 
+    create sum sets and then checks the sum of each. The first valid subset is returned.
     
     Command-line arguments:
     -h, --help: show this help message and exit
