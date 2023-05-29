@@ -1,4 +1,4 @@
-# Cenus
+# Census
 Finds the subset of populations that sum to the target value. Uses `combinations` to create 
 subarrays of the populations that are then summed and checked against the target value.
 
