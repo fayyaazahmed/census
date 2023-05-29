@@ -1,8 +1,8 @@
 # Cenus
-Finds the subset of populations that sum to the target value. Uses combinations to create 
+Finds the subset of populations that sum to the target value. Uses `combinations` to create 
 subarrays of the populations that are then summed and checked against the target value.
 
-The first valid subset is returned.
+All valid subsets are returned.
 
 
 ## Requirements
@@ -29,7 +29,7 @@ The input file must be in CSV format (.csv) and contain the following field(s):
 ## Output Format
 ```
 Target:     <target>
-Subset:     [populations[0], populations[1], ...., populations[n]]
+Subset(s):  [populations[0], populations[1], ...., populations[n]]
 ```
 For output to .txt file use piping:
 ```
@@ -43,6 +43,3 @@ The following command processes sample.csv and outputs the subset of populations
 ```
 python census.py input_files/sample.csv 101000000
 ```
-
-## Limitations
-- Only returns first valid subset

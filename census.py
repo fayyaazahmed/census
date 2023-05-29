@@ -23,13 +23,14 @@ def read_csv(file_name):
 
 
 def find_subset(pops, target):
+    results = []
     for r in range(1, len(pops) + 1):
         for subset in combinations(pops, r):
             if sum(subset) == target:
-                return list(subset)
+                results.append(list(subset))
     
     # No subset found. sad :(
-    return []
+    return results
 
 
 def main():
@@ -55,18 +56,19 @@ def main():
 
     populations = read_csv(config['input_file'])
     target = int(config['target'])
-    subset = find_subset(populations, target)
+    subsets = find_subset(populations, target)
 
     # returns and exits for empty set
     if len(populations) < 1:
         sys.stdout.write("No values were found in \'" + config['input_file'] + "\'\n")
         sys.exit()
 
-    if subset:
+    if subsets:
         print('Target:\t\t' + str(target))
-        print('Subset:\t\t' + str(subset))
+        for subset in subsets:
+            print('Subset(s):\t' + str(subset))
     else:
-        print("No subset found with a total population of ", target)
+        print("No subset found with a total population of " + str(target))
 
 
 if __name__ == "__main__":
